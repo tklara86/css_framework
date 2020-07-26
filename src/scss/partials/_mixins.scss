@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+/* ====================================================================
+ General mixins
+
+====================================================================== */
+
+/* ====================================================================
+ Media queries breakpoints
+====================================================================== */
+$breakpoints: (
+	sm: 380px,
+	md: 600px,
+	lg: 768px,
+	xl: 1024px,
+) !default;
+
+@mixin breakpoint($breakpoint) {
+	@media (max-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+		@content;
+	}
+}
+
+/* ====================================================================
+  No hover
+====================================================================== */
+@mixin no-hover {
+	@media (hover: none) {
+		@content;
+	}
+}
+/* ====================================================================
+  Clearfix
+====================================================================== */
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin fontSmooth {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,106 @@
+.btn {
+  font-size: 1.6rem;
+  cursor: pointer;
+  outline: none;
+  border-radius: 3px;
+  line-height: 1;
+  font-weight: 600;
+  transition: 0.3s;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+
+  @include fontSmooth;
+}
+
+.btn-small {
+  padding-top: $space--xs;
+  padding-bottom: $space--xs;
+  padding-left: $space--sm;
+  padding-right: $space--sm;
+}
+.btn-medium {
+  padding-top: $space--sm;
+  padding-bottom: $space--sm;
+  padding-left: $space--md;
+  padding-right: $space--md;
+}
+
+.btn-large {
+  padding-top: $space--md;
+  padding-bottom: $space--md;
+  padding-left: $space--lg;
+  padding-right: $space--lg;
+}
+
+.btn-primary {
+  color: theme-colors("text", "white");
+  background-color: theme-colors("bg-color", "primary");
+
+  &:hover {
+    background-color: tint-shade-color-control(black, "bg-color", "primary", 1);
+  }
+
+  &--light {
+    color: theme-colors("alert", "primary-light--text");
+    background-color: theme-colors("alert", "primary-light");
+
+    &:hover {
+      background-color: tint-shade-color-control(white, "bg-color", "primary", 7);
+    }
+  }
+}
+
+.btn-success {
+  color: theme-colors("text", "white");
+  background-color: theme-colors("alert", "success");
+
+  &:hover {
+    background-color: tint-shade-color-control(black, "alert", "success", 1);
+  }
+
+  &--light {
+    color: theme-colors("alert", "success-light--text");
+    background-color: theme-colors("alert", "success-light");
+
+    &:hover {
+      background-color: tint-shade-color-control(white, "alert", "success", 7);
+    }
+  }
+}
+
+.btn-danger {
+  color: theme-colors("text", "white");
+  background-color: theme-colors("alert", "danger");
+
+  &:hover {
+    background-color: tint-shade-color-control(black, "alert", "danger", 1);
+  }
+
+  &--light {
+    color: theme-colors("alert", "danger-light--text");
+    background-color: theme-colors("alert", "danger-light");
+
+    &:hover {
+      background-color: tint-shade-color-control(white, "alert", "danger", 7);
+    }
+  }
+}
+
+.btn-warning {
+  color: theme-colors("text", "white");
+  background-color: theme-colors("alert", "warning");
+
+  &:hover {
+    background-color: tint-shade-color-control(black, "alert", "warning", 1);
+  }
+
+  &--light {
+    color: theme-colors("alert", "warning-light--text");
+    background-color: theme-colors("alert", "warning-light");
+
+    &:hover {
+      background-color: tint-shade-color-control(white, "alert", "warning", 8);
+    }
+  }
+}

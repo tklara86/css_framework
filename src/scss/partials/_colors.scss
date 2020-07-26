@@ -1,0 +1,72 @@
+/* ====================================================================
+   Colours
+ ====================================================================== */
+$theme-colors: (
+  "text": (
+    "white": #fff,
+    "accent": #fd9558,
+    "grey-light": #f5f5f5,
+    "grey-dark": #a2a2a2,
+    "body-text": #bcbcbc,
+  ),
+  "bg-color": (
+    "primary": #555fc4,
+    "primary-dark": #1c1b1b,
+    "secondary-dark": #2f2f2f,
+    "tertiary-dark": #707070,
+    "alt": #222121,
+  ),
+  "alert": (
+    "success": #4caf50,
+    "danger": #f0506e,
+    "warning": #ff9800,
+    "primary": #555fc4,
+    "success-light": #e8ffee,
+    "danger-light": #ffe5ea,
+    "warning-light": #fff8df,
+    "primary-light": #e5e9ff,
+    "success-light--text": #489b4c,
+    "danger-light--text": #ff4747,
+    "warning-light--text": #f0b400,
+    "primary-light--text": #5868c7,
+  ),
+) !default;
+
+/*
+ 	Example:  
+	background-color: theme-colors('background-color', 'light');
+ */
+@function theme-colors($key: "text", $variant: "grey-light") {
+  $map: map-get($theme-colors, $key);
+  @return map-get($map, $variant);
+}
+
+/* 
+	Creates tint or shade of color specified in $theme-colors
+	Tint or shade is controlled by number passed in between 0-10 e.g. 2.5 =  25%.
+	Example:
+	background-color: tint-shade-color-control(white, 'primary', 'dark', 2.5);
+ */
+@function tint-shade-color-control($color-base: white, $color-name: "text", $key: "grey-light", $level: 0) {
+  $color-interval: 10%;
+  @if ($color-base == white) {
+    $color: theme-colors($color-name, $key);
+    @return mix($color-base, $color, $level * $color-interval);
+  }
+  @if ($color-base == black) {
+    $color: theme-colors($color-name, $key);
+    @return mix($color-base, $color, $level * $color-interval);
+  }
+}
+
+/* 
+	Controls opacity of color specified in $theme-colors
+	Opacity is controlled by number passed in between 0-10 e.g. 2.5 = .25.
+	Example:
+	background-color: opacity-color-control('primary', 'dark', 7);
+ */
+@function opacity-color-control($color-name: "bg-color", $key: "primary-dark", $opacity: 0) {
+  $opacity-interval: 10;
+  $color: theme-colors($color-name, $key);
+  @return rgba($color, $opacity / $opacity-interval);
+}

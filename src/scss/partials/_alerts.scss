@@ -1,0 +1,52 @@
+.alert {
+  display: inline-block;
+  padding: 0 10px;
+  background: #1e87f0;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  color: #fff;
+  vertical-align: middle;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &-danger {
+    background-color: theme-colors("alert", "danger");
+  }
+
+  &-success {
+    background-color: theme-colors("alert", "success");
+  }
+
+  &-warning {
+    background-color: theme-colors("alert", "warning");
+  }
+
+  &-primary {
+    background-color: theme-colors("alert", "primary");
+  }
+
+  &-danger-light {
+    background-color: theme-colors("alert", "danger-light");
+    color: theme-colors("alert", "danger-light--text");
+    padding: 10px;
+  }
+
+  &-success-light {
+    background-color: theme-colors("alert", "success-light");
+    color: theme-colors("alert", "success-light--text");
+    padding: 10px;
+  }
+
+  &-warning-light {
+    background-color: theme-colors("alert", "warning-light");
+    color: theme-colors("alert", "warning-light--text");
+    padding: 10px;
+  }
+
+  &-primary-light {
+    background-color: theme-colors("alert", "primary-light");
+    color: theme-colors("alert", "primary-light--text");
+    padding: 10px;
+  }
+}

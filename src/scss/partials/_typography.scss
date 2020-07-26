@@ -1,0 +1,131 @@
+/* -------------------------------- 
+
+
+Typography
+
+
+-------------------------------- */
+
+/* 
+  https://type-scale.com
+
+  Type Scales: 
+
+  Major Second - 1.125
+  Minor Third - 1.200
+  Major Third - 1.250
+  Perfect Fourth - 1.333
+  Augument Fourth - 1.414
+  Perfect Fith - 1.500
+
+*/
+
+/* This project uses Major Third Scale - 1.250*/
+
+/* $text-xxs = 10.24px */
+$text--xxs: calc(var(--text-base-size) / (var(--text-scale-ratio) / var(--text-scale-ratio))) !default;
+/* $text-xs = 12.8px */
+$text--xs: calc(var(--text-base-size) / var(--text-scale-ratio)) !default;
+/* $text-sm = 16px */
+$text--sm: calc(var(--text-base-size)) !default;
+/* $text-md = 20px */
+$text--md: calc(var(--text-base-size) * var(--text-scale-ratio)) !default;
+/* $text-lg = 25px */
+$text--lg: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio)) !default; // 25px
+/* $text-xl = 31.25px */
+$text--xl: calc(
+  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)
+) !default; // 31.25px
+/* $text-xxl = 39.06px */
+$text--2xl: calc(
+  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+    var(--text-scale-ratio)
+) !default; // 39.06px
+/* $text-xxxl = 48.83px */
+$text--3xl: calc(
+  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+    var(--text-scale-ratio) * var(--text-scale-ratio)
+) !default; // 48.83
+/* $text-display = 61.04px */
+$text--display: calc(
+  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+    var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)
+) !default; // 61.04px
+/* $text-display-xl = 76.29px */
+$text--display-xl: calc(
+  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+    var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)
+) !default; // 76.29px
+$text--display-2xl: calc(
+  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+    var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+    var(--text-scale-ratio)
+) !default; // 95.29px
+
+/* set base values */
+
+@include breakpoint(md) {
+  :root {
+    --text-base-size: 1.6rem;
+    --text-scale-ratio: 1.22;
+  }
+}
+
+/* text size */
+
+.text--display-2xl {
+  font-size: $text--display-2xl;
+}
+.text--display-xl {
+  font-size: $text--display-xl;
+}
+.text--display {
+  font-size: $text--display;
+}
+h1,
+.text--3xl {
+  font-size: $text--3xl;
+}
+h2,
+.text--2xl {
+  font-size: $text--2xl;
+}
+h3,
+.text--xl {
+  font-size: $text--xl;
+}
+h4,
+.text--lg {
+  font-size: $text--lg;
+}
+.text--md {
+  font-size: $text--md;
+}
+.text--sm {
+  font-size: $text--sm;
+}
+.text--xs {
+  font-size: $text--xs;
+}
+.text--xxs {
+  font-size: $text--xxs;
+}
+
+h1,
+h2,
+h3,
+h4,
+form legend {
+  margin-bottom: $space--xxs;
+  line-height: $heading-line-height;
+}
+ul,
+ol,
+p {
+  margin-bottom: $space--md;
+  line-height: $body-line-height;
+}
+ul li,
+ol li {
+  line-height: $body-line-height;
+}
