@@ -6,3 +6,4 @@ node_modules
 src/css/maps/*.map
 #vscode settings
 .vscode/settings.json
+.idea/

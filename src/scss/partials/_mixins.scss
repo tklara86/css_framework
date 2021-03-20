@@ -1,18 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
-/* ====================================================================
- General mixins
-
-====================================================================== */
-
-/* ====================================================================
- Media queries breakpoints
-====================================================================== */
+/* Media queries breakpoints */
 $breakpoints: (
 	sm: 380px,
 	md: 600px,
 	lg: 768px,
 	xl: 1024px,
-) !default;
+);
 
 @mixin breakpoint($breakpoint) {
 	@media (max-width: map-get($map: $breakpoints, $key: $breakpoint)) {
@@ -20,34 +12,20 @@ $breakpoints: (
 	}
 }
 
-/* ====================================================================
-  No hover
-====================================================================== */
+/*  No hover */
 @mixin no-hover {
 	@media (hover: none) {
 		@content;
 	}
 }
-/* ====================================================================
-  Clearfix
-====================================================================== */
-@mixin clearfix {
-	&::after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-}
-
+/*  Font smooth  */
 @mixin fontSmooth {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 
-/* ====================================================================
-  Margin-top, left, right, bottom
-====================================================================== */
+/*  Margin-top, left, right, bottom */
 $values: 80;
 
 @for $i from 1 through $values {
@@ -63,5 +41,4 @@ $values: 80;
 	.mr-#{$i} {
 		margin-right: #{$i}px;
 	}
-
 }

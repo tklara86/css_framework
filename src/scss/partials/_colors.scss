@@ -1,8 +1,5 @@
-/* ====================================================================
-   Colours
- ====================================================================== */
-// green - primary-green - #58887b, border-color- #749e95, box-shadow - #aeded3, "primary-light": #71b5a345,
-// orange 
+/* Colours  */
+
 :root {
   /* All my colors here share the same hue and saturation */
   --base-blue: 222, 89%;
@@ -48,14 +45,7 @@
   --primary-blue: hsla(var(--palette-blue-50), 100%);
   --primary-green: hsla(var(--palette-green-40), 100%);
   --primary-orange: hsla(var(--palette-orange-50), 100%);
-  --emphasis: hsla(var(--palette-blue-50), 8%);
-  
 }
-
-
-
-
-
 
 $theme-colors: (
   "text": (
@@ -75,7 +65,7 @@ $theme-colors: (
 
   ),
   "bg-color": (
-    "primary": var(--primary-green),
+    "primary": var(--primary-blue),
     "primary-light": #2463eb45,
     "primary-dark": #1c1b1b,
     "secondary-dark": #454545,
@@ -95,11 +85,8 @@ $theme-colors: (
     "warning--light": #fff8df,
     "primary--light": #ccdcfc,
     "secondary--light": #dbdbdb
-  ),
-  "nprogress": (
-    "progressBar": #4fa7a2
   )
-) !default;
+);
 
 /*
  	Example:  

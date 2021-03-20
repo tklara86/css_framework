@@ -1,10 +1,4 @@
-/* -------------------------------- 
-
-
-Typography
-
-
--------------------------------- */
+/* Typography */
 
 /* 
   https://type-scale.com
@@ -20,54 +14,68 @@ Typography
 
 */
 
+
 /* This project uses Major Third Scale - 1.250 */
+:root {
+  --text-base-size: 1.6rem;
+  --text-scale-ratio: 1.25;
+  --space-unit: 1.6rem;
+  /* line-height */
+  --heading-line-height: 1.2;
+  --body-line-height: 1.5;
+}
 
-/* $text-xxs = 10.24px */
-$text--xxs: calc(var(--text-base-size) / (var(--text-scale-ratio) / var(--text-scale-ratio))) !default;
-/* $text-xs = 12.8px */
-$text--xs: calc(var(--text-base-size) / var(--text-scale-ratio)) !default;
-/* $text-sm = 16px */
-$text--sm: calc(var(--text-base-size)) !default;
-/* $text-md = 20px */
-$text--md: calc(var(--text-base-size) * var(--text-scale-ratio)) !default;
-/* $text-lg = 25px */
-$text--lg: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio)) !default; // 25px
-/* $text-xl = 31.25px */
-$text--xl: calc(
-  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)
-) !default; // 31.25px
-/* $text-xxl = 39.06px */
-$text--2xl: calc(
-  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
-    var(--text-scale-ratio)
-) !default; // 39.06px
-/* $text-xxxl = 48.83px */
-$text--3xl: calc(
-  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
-    var(--text-scale-ratio) * var(--text-scale-ratio)
-) !default; // 48.83
-/* $text-display = 61.04px */
-$text--display: calc(
-  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
-    var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)
-) !default; // 61.04px
-/* $text-display-xl = 76.29px */
-$text--display-xl: calc(
-  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
-    var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)
-) !default; // 76.29px
+
+$text--xxs: calc(var(--text-base-size) / (var(--text-scale-ratio) / var(--text-scale-ratio)));
+$text--xs: calc(var(--text-base-size) / var(--text-scale-ratio));
+$text--sm: calc(var(--text-base-size));
+$text--md: calc(var(--text-base-size) * var(--text-scale-ratio));
+$text--lg: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio));
+$text--xl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+$text--2xl: calc(var(--text-base-size) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio));
+$text--3xl: calc(var(--text-base-size) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio));
+$text--display: calc(var(--text-base-size) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio));
+
+$text--display-xl: calc(var(--text-base-size) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio));
+
 $text--display-2xl: calc(
-  var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
-    var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) *
-    var(--text-scale-ratio)
-) !default; // 95.29px
+  var(--text-base-size) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio) *
+  var(--text-scale-ratio));
 
-/* set base values */
 
 @include breakpoint(md) {
   :root {
     --text-base-size: 1.6rem;
-    --text-scale-ratio: 1.22;
+    --text-scale-ratio: 1.20;
   }
 }
 

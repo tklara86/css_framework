@@ -14,23 +14,14 @@
 }
 
 .btn-small {
-  padding-top: $space--xs;
-  padding-bottom: $space--xs;
-  padding-left: $space--sm;
-  padding-right: $space--sm;
+  padding: $space--xs $space--sm;
 }
 .btn-medium {
-  padding-top: $space--sm;
-  padding-bottom: $space--sm;
-  padding-left: $space--md;
-  padding-right: $space--md;
+  padding: $space--sm $space--md;
 }
 
 .btn-large {
-  padding-top: $space--md;
-  padding-bottom: $space--md;
-  padding-left: $space--lg;
-  padding-right: $space--lg;
+  padding: $space--md $space--lg;
   font-size: 2rem;
 }
 
