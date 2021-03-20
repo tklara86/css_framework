@@ -20,7 +20,7 @@ Typography
 
 */
 
-/* This project uses Major Third Scale - 1.250*/
+/* This project uses Major Third Scale - 1.250 */
 
 /* $text-xxs = 10.24px */
 $text--xxs: calc(var(--text-base-size) / (var(--text-scale-ratio) / var(--text-scale-ratio))) !default;
@@ -119,13 +119,16 @@ form legend {
   margin-bottom: $space--xxs;
   line-height: $heading-line-height;
 }
+
 ul,
 ol,
-p {
-  margin-bottom: $space--md;
+p:not(:last-of-type) {
+  margin-bottom: $space--sm;
   line-height: $body-line-height;
 }
 ul li,
-ol li {
+ol li,
+span {
   line-height: $body-line-height;
 }
+

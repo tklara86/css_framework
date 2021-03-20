@@ -31,6 +31,7 @@
   padding-bottom: $space--md;
   padding-left: $space--lg;
   padding-right: $space--lg;
+  font-size: 2rem;
 }
 
 .btn-primary {
@@ -42,8 +43,8 @@
   }
 
   &--light {
-    color: theme-colors("alert", "primary-light--text");
-    background-color: theme-colors("alert", "primary-light");
+    color: theme-colors("text", "primary-light--text");
+    background-color: theme-colors("bg-color", "primary--light");
 
     &:hover {
       background-color: tint-shade-color-control(white, "bg-color", "primary", 7);
@@ -51,56 +52,74 @@
   }
 }
 
-.btn-success {
+.btn-secondary{
   color: theme-colors("text", "white");
-  background-color: theme-colors("alert", "success");
+  background-color: theme-colors("bg-color", "secondary-dark");
 
   &:hover {
-    background-color: tint-shade-color-control(black, "alert", "success", 1);
+    background-color: tint-shade-color-control(black, "bg-color", "secondary-dark", 1);
   }
 
   &--light {
-    color: theme-colors("alert", "success-light--text");
-    background-color: theme-colors("alert", "success-light");
+    color: theme-colors("text", "secondary-light--text");
+    background-color: theme-colors("bg-color", "secondary--light");
 
     &:hover {
-      background-color: tint-shade-color-control(white, "alert", "success", 7);
+      background-color: tint-shade-color-control(white, "bg-color", "secondary-dark", 7);
+    }
+  }
+}
+
+.btn-success {
+  color: theme-colors("text", "white");
+  background-color: theme-colors("bg-color", "success");
+
+  &:hover {
+    background-color: tint-shade-color-control(black, "bg-color", "success", 1);
+  }
+
+  &--light {
+    color: theme-colors("text", "success-light--text");
+    background-color: theme-colors("bg-color", "success--light");
+
+    &:hover {
+      background-color: tint-shade-color-control(white, "bg-color", "success", 7);
     }
   }
 }
 
 .btn-danger {
   color: theme-colors("text", "white");
-  background-color: theme-colors("alert", "danger");
+  background-color: theme-colors("bg-color", "danger");
 
   &:hover {
-    background-color: tint-shade-color-control(black, "alert", "danger", 1);
+    background-color: tint-shade-color-control(black, "bg-color", "danger", 1);
   }
 
   &--light {
-    color: theme-colors("alert", "danger-light--text");
-    background-color: theme-colors("alert", "danger-light");
+    color: theme-colors("text", "danger-light--text");
+    background-color: theme-colors("bg-color", "danger--light");
 
     &:hover {
-      background-color: tint-shade-color-control(white, "alert", "danger", 7);
+      background-color: tint-shade-color-control(white, "bg-color", "danger", 7);
     }
   }
 }
 
 .btn-warning {
   color: theme-colors("text", "white");
-  background-color: theme-colors("alert", "warning");
+  background-color: theme-colors("bg-color", "warning");
 
   &:hover {
-    background-color: tint-shade-color-control(black, "alert", "warning", 1);
+    background-color: tint-shade-color-control(black, "bg-color", "warning", 1);
   }
 
   &--light {
-    color: theme-colors("alert", "warning-light--text");
-    background-color: theme-colors("alert", "warning-light");
+    color: theme-colors("text", "warning-light--text");
+    background-color: theme-colors("bg-color", "warning--light");
 
     &:hover {
-      background-color: tint-shade-color-control(white, "alert", "warning", 8);
+      background-color: tint-shade-color-control(white, "bg-color", "warning", 8);
     }
   }
 }

@@ -43,3 +43,25 @@ $breakpoints: (
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+
+/* ====================================================================
+  Margin-top, left, right, bottom
+====================================================================== */
+$values: 80;
+
+@for $i from 1 through $values {
+	.mt-#{$i} {
+			margin-top: #{$i}px;
+	}
+	.mb-#{$i} {
+		margin-bottom: #{$i}px;
+	}
+	.ml-#{$i} {
+		margin-left: #{$i}px;
+	}
+	.mr-#{$i} {
+		margin-right: #{$i}px;
+	}
+
+}
