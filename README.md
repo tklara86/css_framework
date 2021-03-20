@@ -1,7 +1,3 @@
-# CSS Framework
-
-A lightweight css framework for personal projects
-
 ### Installation
 
 Install the dependencies (gulp, gulp-sass, browser-sync, css nano, autoprefixer, gulp-sourcemaps)
