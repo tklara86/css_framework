@@ -26,35 +26,34 @@
         <br>
         <br>
 
-        <h1>Sign In</h1>
+        <h1 class="text--2xl">Sign In</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolore eligendi est explicabo ipsum maxime nemo neque sunt? Autem consequatur dolores incidunt itaque maiores nesciunt praesentium repudiandae saepe veniam veritatis.</p>
 
         <form>
             <div class="form-control">
                 <label class="form-label" for="inputName">Name</label>
-                <input class="input-control" type="text" name="inputName" id="inputName" placeholder="Name">
+                <input class="input-control input-control--small" type="text" name="inputName" id="inputName" placeholder="Name">
             </div>
 
             <div class="form-control">
                 <label class="form-label" for="inputEmail">Email</label>
-                <input class="input-control" type="text" name="email" id="inputEmail" placeholder="Email">
-
+                <input class="input-control input-control--small" type="text" name="email" id="inputEmail" placeholder="Email">
             </div>
 
             <div class="form-control">
                 <label class="form-label" for="textarea">Description</label>
-                <textarea class="input-control" name="textarea" id="textarea" placeholder="Description" rows="10"></textarea>
+                <textarea class="input-control input-control--small" name="textarea" id="textarea" placeholder="Description" rows="10"></textarea>
             </div>
 
             <div class="form-control radio">
                 <label class="form-label visible"></label>
-                <input class="input-control" type="radio" name="type">
+                <input class="input-control input-control--small" type="radio" name="type">
                 <span class="checkmark"></span>
             </div>
 
             <div class="form-control radio">
                 <label class="form-label visible"></label>
-                <input class="input-control" type="radio" name="type">
+                <input class="input-control input-control--small" type="radio" name="type">
                 <span class="checkmark"></span>
             </div>
         </form>
@@ -70,6 +69,15 @@
     <button class="btn btn-medium btn-danger--light">Button Danger</button>
     <button class="btn btn-medium btn-warning--light">Button Warning</button>
     <button class="btn btn-large btn-primary--light">Button Primary</button>
+
+    <script>
+        const spans = document.querySelectorAll('span');
+
+
+        [].forEach.call(spans, (ele) => {
+            console.log(ele)
+        })
+    </script>
 
 
 </body>
