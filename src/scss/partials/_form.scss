@@ -18,14 +18,14 @@ form {
 }
 
 .input-control--large {
-  margin-top: $space--md;
+  margin-top: $space--sm;
   margin-bottom: $space--md;
   padding: $space--md;
 }
 
 .input-control--small {
-  margin-top: $space--sm;
-  margin-bottom: $space--sm;
+  margin-top: $space--xs;
+  margin-bottom: $space--md;
   padding: $space--sm;
 }
 
@@ -62,26 +62,6 @@ form {
   background: theme-colors('bg-color', 'primary');
 }
 
-.form-control {
-  position: relative;
-  textarea,
-  input {
-    font-weight: 400;
-    font-family: $font-primary;
-    background-color: theme-colors('bg-color', 'inputBgColor');
-    position: relative;
-  }
-  input:focus,
-  textarea:focus {
-    background-color: white;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 2px #bfdbfe
-  }
-  &--flex {
-    display: flex;
-    flex-direction: column;
-  }
-}
 
 .form-heading {
   max-width: $form-witdh;
@@ -101,18 +81,18 @@ form {
   position: relative;
   textarea,
   input {
-    font-weight: 500;
+    font-weight: 400;
     font-family: $font-primary;
     background-color: theme-colors('bg-color', 'inputBgColor');
   }
+  textarea:focus,
   input:focus {
     background-color: white;
     border-color: #3b82f6;
     box-shadow: 0 0 0 2px #bfdbfe;
   }
-
-
 }
+
 label {
   font-size: $text--sm;
   font-weight: 600;
